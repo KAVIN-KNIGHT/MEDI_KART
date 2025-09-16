@@ -1,0 +1,110 @@
+/* Base Styles */
+:root {
+  --primary-color: #004d40;
+  --primary-dark: #002f24;
+  --primary-light: #006d5b;
+  --text-color: #333;
+  --light-gray: #f5f5f5;
+  --white: #ffffff;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+/* Policy Banner */
+.policy-banner {
+  background: linear-gradient(135deg, #e0f2f1, #b2dfdb);
+  padding: 120px 5% 60px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.policy-banner h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.policy-banner p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+/* Policy Content */
+.policy-wrapper {
+  padding: 60px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.policy-container {
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 40px;
+}
+
+.policy-container h2 {
+  color: var(--primary-color);
+  padding: 15px 0;
+  margin: 20px 0 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.policy-container h2:hover {
+  color: var(--primary-dark);
+}
+
+.policy-container .content {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.policy-container .content.show {
+  max-height: 1000px;
+  padding: 20px;
+}
+
+.policy-container p,
+.policy-container li {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.policy-container ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.policy-container li {
+  margin-bottom: 10px;
+}
+
+.policy-container a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.policy-container a:hover {
+  text-decoration: underline;
+}
+
+.arrow {
+  font-size: 0.8em;
+  transition: var(--transition);
+}

@@ -1,0 +1,430 @@
+/* Base Styles */
+:root {
+  --primary-color: #004d40;
+  --primary-dark: #002f24;
+  --primary-light: #006d5b;
+  --text-color: #333;
+  --light-gray: #f5f5f5;
+  --white: #ffffff;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+/* Responsive Typography */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 6rem 5% 4rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+  color: var(--text-color);
+  margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.25rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-btn {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.hero-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.shop-link {
+  color: white;
+  text-decoration: none;
+}
+
+/* Services Section */
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 2.5rem 5%;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  width: 11.25rem;
+  font-size: 0.9375rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Health Categories Section */
+.health-categories {
+  text-align: center;
+  padding: 2.5rem 5%;
+  background: var(--light-gray);
+}
+
+.health-categories h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.875rem;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  background: var(--white);
+  padding: 1.25rem;
+  width: 10rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.category-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background-color: var(--light-gray);
+  padding: 3.75rem 5%;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2.5rem;
+}
+
+.reasons {
+  display: flex;
+  justify-content: center;
+  gap: 1.875rem;
+  flex-wrap: wrap;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.reason-card {
+  background-color: var(--white);
+  padding: 1.875rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  width: 21.875rem;
+  text-align: center;
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.reason-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.reason-image {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 0 auto 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 77, 64, 0.1) 0%, rgba(0, 47, 36, 0.05) 100%);
+  border-radius: 50%;
+}
+
+.reason-image img {
+  width: 3.75rem;
+  height: 3.75rem;
+  object-fit: contain;
+}
+
+.reason-card h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 0.9375rem;
+}
+
+.reason-card p {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Modal Styles */
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 28.125rem;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button[type="submit"]:hover {
+  background-color: var(--primary-dark);
+}
+
+.text {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.text a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .hero {
+    padding: 5rem 5% 3rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .service-card, .category-card {
+    width: 10rem;
+    padding: 1.25rem 0.75rem;
+  }
+  
+  .reason-card {
+    width: 18rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 5% 2rem;
+    margin-top: 70px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  .services, .categories {
+    gap: 1rem;
+  }
+  
+  .service-card, .category-card {
+    width: 9rem;
+    font-size: 0.875rem;
+  }
+  
+  .reason-card {
+    width: 100%;
+    max-width: 22rem;
+  }
+  
+  .health-categories h2, .why-choose-us h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 3.5rem 5% 1.5rem;
+  }
+  
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .services, .categories {
+    gap: 0.75rem;
+  }
+  
+  .service-card, .category-card {
+    width: 8rem;
+    padding: 1rem 0.5rem;
+    font-size: 0.8125rem;
+  }
+  
+  .health-categories h2, .why-choose-us h2 {
+    font-size: 1.5rem;
+  }
+  
+  .reason-card {
+    padding: 1.5rem;
+  }
+  
+  .modal-content {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card, .category-card {
+    width: 7.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .hero-btn {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .reason-image {
+    width: 5rem;
+    height: 5rem;
+  }
+  
+  .reason-image img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .service-card, .category-card {
+    width: 6.5rem;
+    font-size: 0.6875rem;
+  }
+  
+  .health-categories h2, .why-choose-us h2 {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,378 @@
+/* Header Styles */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+  padding: 15px 5%;
+  box-shadow: var(--shadow);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header-container.scrolled {
+  padding: 10px 5%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 50px;
+  transition: all 0.3s ease;
+}
+
+.logo p {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.header-container.scrolled .logo img {
+  height: 40px;
+}
+
+.header-container.scrolled .logo p {
+  font-size: 22px;
+}
+
+/* Navigation Menu */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu ul li {
+  position: relative;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 0;
+  position: relative;
+  font-size: 16px;
+}
+
+.nav-menu ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  bottom: -5px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-menu ul li a:hover::after {
+  width: 100%;
+}
+
+.nav-menu ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* Login & Cart Section */
+.login-cart {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.cart-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  font-size: 24px;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
+}
+
+.login-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.login-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* User Dropdown Menu - Updated with Material UI styles */
+.user-dropdown {
+  position: relative;
+}
+
+.user-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 6px 14px 6px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.user-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.user-name {
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: var(--white);
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a, 
+.dropdown-content button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: var(--text-color);
+  text-decoration: none;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dropdown-content a:hover, 
+.dropdown-content button:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+}
+
+.user-dropdown:hover .dropdown-content {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Material UI icon adjustments */
+.mui-icon {
+  font-size: 18px !important;
+  color: inherit;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+.menu-icon.active {
+  color: #ff4d4d;
+}
+
+/* Menu Overlay for Mobile */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .header-container {
+    padding: 15px 20px;
+  }
+  
+  .header-container.scrolled {
+    padding: 10px 20px;
+  }
+  
+  .menu-icon {
+    display: block;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100vh;
+    background: var(--white);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    z-index: 1000;
+    padding-top: 80px;
+    overflow-y: auto;
+  }
+  
+  .nav-menu.active {
+    right: 0;
+  }
+  
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .nav-menu ul li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .nav-menu ul li a {
+    display: block;
+    padding: 15px 25px;
+    font-size: 16px;
+  }
+  
+  .nav-menu ul li a::after {
+    display: none;
+  }
+  
+  .menu-overlay {
+    display: block;
+  }
+
+  .dropdown-content {
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-cart {
+    gap: 10px;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .logo p {
+    font-size: 20px;
+  }
+  
+  .cart-icon {
+    font-size: 20px;
+  }
+  
+  .login-btn,
+  .user-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .user-name {
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-container {
+    padding: 10px 15px;
+  }
+  
+  .header-container.scrolled {
+    padding: 8px 15px;
+  }
+  
+  .logo img {
+    height: 35px;
+  }
+  
+  .logo p {
+    font-size: 18px;
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+  }
+  
+  .cart-icon {
+    font-size: 18px;
+  }
+  
+  .login-btn,
+  .user-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  
+  .nav-menu {
+    width: 100%;
+    right: -100%;
+  }
+
+  .user-name {
+    max-width: 60px;
+  }
+}
