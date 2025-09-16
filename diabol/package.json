@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://KAVIN-KNIGHT.github.io/MEDI-KART",
+  "homepage": "https://KAVIN-KNIGHT.github.io/MEDI_KART",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
