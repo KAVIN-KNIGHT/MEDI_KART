@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
-import '../styles/Cart.css';
+import '../styles/cart.css';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState(() => JSON.parse(localStorage.getItem('cartItems')) || []);
